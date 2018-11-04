@@ -8,6 +8,11 @@ $ kubectl apply -f mysql-deployment.yaml
 $ kubectl apply -f wordpress-deployment.yml
 ```
 
+## Access
+```
+$ minikube service wordpress
+```
+
 ## Delete
 ```
 $ kubectl delete -f mysql-pass.yml
