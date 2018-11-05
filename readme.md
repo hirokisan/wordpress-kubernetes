@@ -30,7 +30,17 @@ $ gcloud container clusters create wordpress-kubernetes --num-nodes=2 \
 --zone asia-northeast1-a \
 --machine-type g1-small \
 --enable-autoscaling --min-nodes=2 --max-nodes=5
+$ kubectl apply -f mysql-pass.yml
+$ kubectl apply -f mysql-deployment.yml
+$ kubectl apply -f wordpress-deployment.yml
+```
 
+## Delete cluster from GCP
+```
+$ kubectl delete -f mysql-pass.yml
+$ kubectl delete -f mysql-deployment.yml
+$ kubectl delete -f wordpress-deployment.yml
+$ gcloud container clusters delete wordpress-kubernetes --zone asia-northeast1-a
 ```
 
 ## Ref
